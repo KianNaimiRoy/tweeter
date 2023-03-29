@@ -6,8 +6,13 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -15,11 +20,23 @@ html {
  */
 
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #289e82;
   font-size: 24px;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+main {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #545149;
+  background-color: #289e82;
+  font-size: 24px;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+}
+

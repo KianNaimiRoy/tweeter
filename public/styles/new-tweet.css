@@ -1,0 +1,80 @@
+.tweet-button {
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  color: #FFFFFF;
+}
+
+.new-tweet {
+  display: flex;
+  background-color: #289e82;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  align-items: center;
+
+}
+
+.text-area {
+  width: 600px;
+}
+
+#tweet-text {
+  width: 100%;
+  font-weight: bold;
+  background-color: #289e82;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  border-top: #289e82;
+  border-left: #289e82;
+  border-right: #289e82;
+  border-bottom: 0.2rem solid black;
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee';
+}
+article:hover{
+    box-shadow: 0 0 11px rgba(33,33,33, 10); 
+  }
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 7em;
+  padding: 10px;
+  margin: 40px 0;
+  width: 25em;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: 0.2rem solid black;
+}
+article header{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+}
+
+.user-handle{
+  color: #6cbaa8;
+  font-weight: bold;
+}
+
+article p {
+  font-weight: bold;
+}
+#new-tweet{
+  margin-top: 30px;
+}
+
+article footer {
+  padding-top: 10px;
+  border-top: 0.2rem solid black;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+.icons{
+  float: right;
+  color:#4056A1;
+}
+footer i:hover{
+  color:#b9aa05
+}
