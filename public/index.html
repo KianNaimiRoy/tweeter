@@ -24,7 +24,7 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 </head>
@@ -33,7 +33,7 @@
   <nav>
     <span class="Bungee">tweeter</span>
     <div class="container">
-      <div class="write-a-tweet">Write a tweet</div>
+      <button type="submit" class="write-a-tweet">Write a Tweet</button>
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
@@ -44,14 +44,16 @@
     </div>
     <br>
     <div>
-      <h2>Santanoria Hollandiverse</h2>
+      <h2>Rick Roller
+      </h2>
     </div>
   </header>
 
   <main class="container">
     <section class="new-tweet">
-      <!-- <h4>Compose Tweet</h4> -->
-      <form method="POST" action="/tweets/">
+      <form>
+        <div id="over-140-error">Sorry! You've got to keep it under 140 characters.</div>
+        <div id="no-content-error">Oh no! Can't tweet an empty tweet.</div>
         <div class="text-area">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         </div>
@@ -61,23 +63,7 @@
         </div>
       </form>
     </section>
-    <section id="tweets">
-      <article>
-        <header>
-          <p>Santanoria</p>
-          <p class="user-handle">
-            @VersesTheWorld
-          </p>
-        </header>
-        <p id="new-tweet">OMG first tweet!</p>
-        <footer>10 days ago
-          <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+    <section id="tweets-container">
     </section>
   </main>
 </body>

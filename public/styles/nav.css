@@ -11,6 +11,19 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-.Bungee{
+
+.container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+.Bungee {
   font-family: 'Bungee';
+}
+
+.write-a-tweet {
+  background-color: #4056A1;
+  font-family: 'Source Sans Pro';
+  color: #FFFFFF
 }

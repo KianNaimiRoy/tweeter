@@ -6,10 +6,13 @@
 
 .new-tweet {
   display: flex;
-  background-color: #289e82;
+  background-color: #ecb666;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   align-items: center;
-
+  word-wrap: break-word
+}
+.latest-tweets{
+  word-wrap: break-word
 }
 
 .text-area {
@@ -17,13 +20,15 @@
 }
 
 #tweet-text {
+  padding-top: 20px;
   width: 100%;
+  font-size: medium;
   font-weight: bold;
-  background-color: #289e82;
+  background-color: #ecb666;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-  border-top: #289e82;
-  border-left: #289e82;
-  border-right: #289e82;
+  border-top: #ecb666;
+  border-left: #ecb666;
+  border-right: #ecb666;
   border-bottom: 0.2rem solid black;
 }
 
@@ -31,9 +36,11 @@
   float: right;
   font-family: 'Bungee';
 }
-article:hover{
-    box-shadow: 0 0 11px rgba(33,33,33, 10); 
-  }
+
+article:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 10);
+}
+
 article {
   display: flex;
   flex-direction: column;
@@ -44,22 +51,28 @@ article {
   width: 25em;
   font-family: 'Source Sans Pro', sans-serif;
   border: 0.2rem solid black;
-}
-article header{
-display: flex;
-justify-content: space-between;
-flex-direction: row;
+  border-radius: 10px;
 }
 
-.user-handle{
-  color: #6cbaa8;
-  font-weight: bold;
+article .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-handle {
+  color: #4056A1; 
+  margin-left: auto;
+}
+.user-name{
+  margin-right: auto;
 }
 
 article p {
   font-weight: bold;
 }
-#new-tweet{
+
+#new-tweet {
   margin-top: 30px;
 }
 
@@ -71,10 +84,29 @@ article footer {
   display: flex;
   justify-content: space-between;
 }
-.icons{
+
+.icons {
   float: right;
-  color:#4056A1;
+  color: #4056A1;
 }
-footer i:hover{
-  color:#b9aa05
+
+footer i:hover {
+  color: #b9aa05
 }
+
+#over-140-error {
+  height: 40px;
+  font-family: 'Bungee';
+  color: #D8000C;
+  background-color: #ecb666;
+  border: #D8000C;
+}
+
+#no-content-error {
+  height: 40px;
+  font-family: 'Bungee';
+  color: #D8000C;
+  background-color: #ecb666;
+  border: #D8000C, 2px;
+}
+

@@ -22,7 +22,7 @@ html {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
-  background-color: #289e82;
+  background-color: #ecb666;
   font-size: 24px;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
@@ -35,8 +35,22 @@ main {
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
-  background-color: #289e82;
+  background-color: #ecb666;
   font-size: 24px;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 }
 
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 33.3%;
+    float: left;
+  }
+
+
+  main {
+    width: 66.6%;
+    float: right;
+    padding-top: 220px;
+  }
+
+}
