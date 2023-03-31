@@ -70,16 +70,16 @@ $(document).ready(function() {
     //this is the actual html for the tweet
     const $dynamicTweet = `<article>
     <div class="header">
-    <img #id="user-pic" src=${escape(tweet.user.avatars)}/>
-        <p class="user-name">${escape(tweet.user.name)}</p>
+    <img #id="user-pic" src=${tweet.user.avatars}/>
+        <p class="user-name">${tweet.user.name}</p>
         <p class="user-handle">
-        ${escape(tweet.user.handle)}
+        ${tweet.user.handle}
         </p>
     </div>
       <p class="latest-tweets">
       ${escape(tweet.content.text)}
       </p>
-      <footer>${escape(timeAgo)}
+      <footer>${timeAgo}
         <div class="icons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -104,6 +104,7 @@ $(document).ready(function() {
     }
     //turns encoded url into a serialized string
     const encodedURL = $('form').serialize();
+    $('#tweet-text').val('');
 
 
     //ajax method to actually post the created tweet after the button has been pressed
