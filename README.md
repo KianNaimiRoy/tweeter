@@ -22,11 +22,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots:
 
-![Home Page](https://github.com/KianNaimiRoy/tweeter/blob/master/Screenshot%202023-03-30%20162946.png?raw=true)
-![No Content Error](https://github.com/KianNaimiRoy/tweeter/blob/master/Screenshot%202023-03-30%20163215.png?raw=true)
-![Too May Characters Error](https://github.com/KianNaimiRoy/tweeter/blob/master/Screenshot%202023-03-30%20163049.png?raw=true)
-![Individual Tweet](https://github.com/KianNaimiRoy/tweeter/blob/master/Screenshot%202023-03-30%20163243.png?raw=true)
-![Individual Tweet](https://github.com/KianNaimiRoy/tweeter/blob/master/Screenshot%202023-03-30%20163257.png?raw=true)
+![Home Page](https://github.com/KianNaimiRoy/tweeter/blob/master/docs/Screenshot%202023-03-30%20162946.png?raw=true)
+![No Content Error](https://github.com/KianNaimiRoy/tweeter/blob/master/docs/Screenshot%202023-03-30%20163215.png?raw=true)
+![Too May Characters Error](https://github.com/KianNaimiRoy/tweeter/blob/master/docs/Screenshot%202023-03-30%20163049.png?raw=true)
+![Individual Tweet](https://github.com/KianNaimiRoy/tweeter/blob/master/docs/Screenshot%202023-03-30%20163243.png?raw=true)
+![Individual Tweet](https://github.com/KianNaimiRoy/tweeter/blob/master/docs/Screenshot%202023-03-30%20163257.png?raw=true)
 
 
 
