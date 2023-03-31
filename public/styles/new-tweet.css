@@ -94,19 +94,11 @@ footer i:hover {
   color: #b9aa05
 }
 
-#over-140-error {
+#error-message {
   height: 40px;
   font-family: 'Bungee';
   color: #D8000C;
   background-color: #ecb666;
   border: #D8000C;
-}
-
-#no-content-error {
-  height: 40px;
-  font-family: 'Bungee';
-  color: #D8000C;
-  background-color: #ecb666;
-  border: #D8000C, 2px;
 }
 

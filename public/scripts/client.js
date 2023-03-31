@@ -5,36 +5,8 @@
  */
 $(document).ready(function() {
   //hiding error messages
-  $('#over-140-error').hide();
-  $('#no-content-error').hide();
-
+  $('#error-message').hide();
   // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
   const renderTweets = function(tweets) {
 
     $('#tweets-container').empty();
@@ -57,6 +29,11 @@ $(document).ready(function() {
     });
   };
   loadTweets();
+
+  const displayError = function(message){
+    $('#error-message').html(message)
+    return $('#error-message').slideDown(400);
+  }
   //makes a tweet object that is then passed to the database
   const createTweetElement = function(tweet) {
     //timestamps
@@ -67,6 +44,7 @@ $(document).ready(function() {
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     };
+
     //this is the actual html for the tweet
     const $dynamicTweet = `<article>
     <div class="header">
@@ -89,7 +67,6 @@ $(document).ready(function() {
     </article>`;
     return $dynamicTweet;
   };
-  const $tweet = createTweetElement(data[0]); $('#tweets-container').append($tweet);
   //tweet button logic
   $('form').on('submit', (event) => {
     $('#CommentBox').val('');
@@ -99,12 +76,12 @@ $(document).ready(function() {
     event.preventDefault();
     //error message triggers
     const $tweetLength = $('textarea').val().length;
-    if ($tweetLength > 140) {
-      return $('#over-140-error').slideDown(400);
-    }
     if (!$tweetLength) {
-      return $('#no-content-error').slideDown(400);
+      return displayError("Oh no! Can't tweet an empty tweet.")
     }
+    if ($tweetLength > 140) {
+      return displayError("The tweet length is over 140 characters.")
+    }  
     //turns encoded url into a serialized string
     const encodedURL = $('form').serialize();
     $('#tweet-text').val('');
@@ -117,9 +94,10 @@ $(document).ready(function() {
       data: encodedURL,
     }).then((response) => {
       loadTweets();
-      $('#over-140-error').slideUp(400);
-      $('#no-content-error').slideUp(400);
-    });
+      $('#error-message').slideUp(400);
+      }).catch((err) => {
+      return displayError("Something went wrong! please try again.");
+    })
   });
 });
 
