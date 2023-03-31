@@ -29,11 +29,11 @@ $(document).ready(function() {
     });
   };
   loadTweets();
-
-  const displayError = function(message){
-    $('#error-message').html(message)
+  //a helper function to make calling errors easier.
+  const displayError = function(message) {
+    $('#error-message').html(message);
     return $('#error-message').slideDown(400);
-  }
+  };
   //makes a tweet object that is then passed to the database
   const createTweetElement = function(tweet) {
     //timestamps
@@ -77,11 +77,11 @@ $(document).ready(function() {
     //error message triggers
     const $tweetLength = $('textarea').val().length;
     if (!$tweetLength) {
-      return displayError("Oh no! Can't tweet an empty tweet.")
+      return displayError("Oh no! Can't tweet an empty tweet.");
     }
     if ($tweetLength > 140) {
-      return displayError("The tweet length is over 140 characters.")
-    }  
+      return displayError("The tweet length is over 140 characters.");
+    }
     //turns encoded url into a serialized string
     const encodedURL = $('form').serialize();
     $('#tweet-text').val('');
@@ -95,9 +95,9 @@ $(document).ready(function() {
     }).then((response) => {
       loadTweets();
       $('#error-message').slideUp(400);
-      }).catch((err) => {
+    }).catch((err) => {
       return displayError("Something went wrong! please try again.");
-    })
+    });
   });
 });
 
