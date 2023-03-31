@@ -92,6 +92,9 @@ $(document).ready(function() {
   const $tweet = createTweetElement(data[0]); $('#tweets-container').append($tweet);
   //tweet button logic
   $('form').on('submit', (event) => {
+    $('#CommentBox').val('');
+    $('.counter').val(140);
+
     //stops the browser sunning default operations
     event.preventDefault();
     //error message triggers
